@@ -65,3 +65,22 @@ class Solution {
     }
 }
 */
+/*
+
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        if(nums.length==0)return 0;
+        Arrays.sort(nums);
+        System.out.println(Arrays.toString(nums));
+        int ans=1,temp,pp;
+        for(int i =0;i<nums.length;){
+            pp=1;temp=nums[i];
+            while(i<nums.length&&(temp+1==nums[i]||temp==nums[i])){
+                if(temp!=nums[i])pp++;temp=nums[i];i++;
+            }
+            if(pp>ans)ans=pp;
+        }
+        return ans;
+    }
+}
+*/
