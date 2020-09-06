@@ -41,3 +41,27 @@ class Solution {
         return ans;
     }
 }
+
+
+/*
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        if(nums.length==0)return 0;
+        Map <Integer,Integer> ok= new HashMap<>();
+        int k,v,x;
+        int ans=1;
+        for(int i=0;i<nums.length;i++){
+            x=nums[i];
+            if(!ok.containsKey(x)){
+                k = ok.containsKey(x-1)?ok.get(x-1):0;
+                v = ok.containsKey(x+1)?ok.get(x+1):0;
+                ans = Math.max(k+v+1,ans);
+                ok.put(x-k,k+v+1);
+                ok.put(x+v,k+v+1);
+                ok.put(x  ,k+v+1);
+            }
+        }
+        return ans;
+    }
+}
+*/
