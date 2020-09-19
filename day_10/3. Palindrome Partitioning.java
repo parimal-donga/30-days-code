@@ -14,6 +14,10 @@ class Solution {
             return true;
         }
         int j=i;
+        temp.add(new String(a).substring(i,j+1));
+        done(ans,temp,a,j+1);
+        temp.remove(temp.size()-1);
+        j++;
         while(j<a.length){
             if(palin(a,i,j)){
                 temp.add(new String(a).substring(i,j+1));
